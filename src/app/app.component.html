@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!--<div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -18,4 +18,88 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<hr>
+<h4>This is a counter</h4>
+<p> {{ counter }} </p>
+<button class="btn btn-primary" (click)="counterPlus()" style="margin-right: 10px"> Add One</button>
+<button class="btn btn-primary" (click)="resetCounter()"> Reset Counter</button>-->
+
+<hr>
+<h4>风味：</h4>
+<div *ngFor="let spice of spices">
+  <div style="margin-bottom: 2px; display: flex; justify-content: space-between">
+    <div><input type="radio" checked="checked" name="Spice"> <span> {{ spice }} </span></div>
+  </div>
+</div>
+
+<h4>食材：</h4>
+<div *ngFor="let element of food">
+  <div style="margin-bottom: 2px; display: flex; justify-content: space-between">
+    <div><input type="radio" checked="checked" name="Food"> <span> {{ element }} </span></div>
+  </div>
+</div>
+
+<br>
+<button type="btn btn-primary" (click)="isResultGood()"> 做菜! </button>
+<hr>
+<div class="informBoxBoarder" *ngIf="goodResult; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>'好菜!'</ng-template>
+<ng-template #elseBlock>'您的口味重了一些!'</ng-template>
+
+
+<!--<div *ngIf="!goodResult" class="informBoxBoarder"> '您的口味重了一些!' </div>-->
+<!--<div *ngIf="isLogin" class="informBoxBoarder"> You Loggedin as {{ userName }} </div>-->
+<!--<button type="button" onclick="alert('好菜!')"> 做菜! </button>-->
+<!--<button class="btn btn-light" (click)="login()" style="margin-right: 10px"> Login </button>-->
+
+<!--<div>
+  <span> User Name: </span>
+  <input type="text" [(ngModel)]="userName">
+</div>-->
+
+<!--<div *ngIf="show; then thenBlock; else elseBlock">this is ignored</div>
+<ng-template #primaryBlock>Primary text to show</ng-template>
+<ng-template #secondaryBlock>Secondary text to show</ng-template>
+<ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>
+<div *ngIf="isLogin; then showTemplate else hideTemplate"></div>-->
+
+<!--<ng-template #showTemplate>
+  <p>Condition Passed!</p>
+</ng-template>
+
+<ng-template #hideTemplate>
+  <p>Condition Failed!</p>
+</ng-template>-->
+
+
+<!--<hr>
+<h4>This is a input Box with Event Binding</h4>
+<div>
+  <span>User Name: </span>
+  <input type="text" (input)="onUpdateUserName($event)">
+</div>
+
+<div>
+  <span>Password: </span>
+  <input type="password">
+</div>
+<div *ngIf="isLogin" class="informBoxBoarder"> You Loggedin as {{ userName }} </div>
+<button class="btn btn-light" (click)="login()" style="margin-right: 10px"> Login </button>
+<button class="btn btn-light" (click)="signOut()"> Sign Out </button>-->
+
+<!--<hr>
+<h4>This is a input Box with Two Way Data Binding</h4>
+<div>
+  <span> User Name: </span>
+  <input type="text" [(ngModel)]="userName">
+</div>
+
+<div>
+  <span>Password: </span>
+  <input type="password">
+</div>
+<div *ngIf="isLogin" class="informBoxBoarder"> You Loggedin as {{ userName }} </div>
+<button class="btn btn-light" (click)="login()" style="margin-right: 10px"> Login </button>
+<button class="btn btn-light" (click)="signOut()"> Sign Out </button>
+
+<router-outlet></router-outlet>-->
