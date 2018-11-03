@@ -22,7 +22,7 @@ export class AppComponent {
   isResultGood() {
     this.isChosen = true;
     this.isClear = false;
-    if (this.foodChosen === 'lobster' || (this.foodChosen === 'crab' && this.spiceChosen === 'scallion')) {
+    if (this.foodChosen === 'lobster' || (this.foodChosen === 'crab' && (this.spiceChosen === 'scallion' || this.spiceChosen === 'XO'))) {
       this.goodResult = true;
     }
     else {
