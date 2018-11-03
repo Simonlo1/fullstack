@@ -1,0 +1,58 @@
+html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  background-image: url("../../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  width: 150px;
+  margin: 10px;
+  text-align: left;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+}
+
+.informBoxBoarder{
+  width: 300px;
+  border-color: cornflowerblue;
+}
+
+.wrapper {
+  text-align: center;
+}

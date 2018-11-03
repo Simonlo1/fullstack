@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 /*一定要添加使得ngModel能用*/
 import { FormsModule } from '@angular/forms';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
